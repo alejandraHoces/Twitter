@@ -21,7 +21,7 @@
     } else {
       counter.style.color = '#325d81';
     }
-  });/*
+  });*/
   // funcion que devuelve la hora - Crea un div con el texto ingresado.
   submit.addEventListener('click', function() {
     if (textarea.value.length > 0) {
@@ -44,7 +44,7 @@
       submit.disabled = true;
     }
   });
-*/
+/*
   // funcion en la cual el textarea crece con el texto.
   textarea.addEventListener('keyup', function(event) {
     if (event.keyCode = 13) {
@@ -55,4 +55,4 @@
       textarea.style = 'initial';
     }
   });
-});
+});*/
