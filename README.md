@@ -1,6 +1,6 @@
 ## **RETO DE CODIGO TWITTER**  
 En el siguiente trabajo se realizó una replica de la red social Twitter.  
-![Producto final reto-twitter](/assets/images/producto final twitter.png)
+![Producto final twitter](assets/images/twitter.png)
 ### Informacion General
 - Tipografīa utilizada Sree Krushnadevaraya.
 - El sitio esta estructurado con 3 secciones:  
