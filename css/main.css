@@ -1,0 +1,132 @@
+/*estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+/*seccion uno imagen de fondo y altura*/
+body{
+    background-image: url(../assets/images/fondoflores.jpg);
+    background-size: 100%;
+}
+/*encabezado ancho y color de fondo*/
+h1 {
+    text-align: center;
+    color:#fff;
+    background: #1da1f2;
+    font-size:54px;
+}
+/*cuadro uno posicionando caja y estilos de texto*/
+.textbox-one{
+    background: #fff;
+    display: inline-block;
+    margin: 10px 10px 0 120px;
+    width: 540px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+.textbox-one h2{
+    font-size: 35px;
+    color :#4d4d4d;
+    padding-left: 30px;
+}
+
+.textbox-one p {
+    padding-left: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    color :#4d4d4d;
+}
+
+.textbox-one h4 {
+    border-top: 2px solid #f2f2f2;
+    font-size: 28px;
+    margin-top: 25px;
+    color: #325d81;
+    padding-left: 30px;
+}
+/*cuadro dos posicionando textarea,añadiendo color de fondo */
+.news {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    border-radius: 3px;
+    position: absolute;
+    top: 125px;
+}
+button {
+    display:inline-block;
+    background:#1da1f2;
+    color:#fff;
+    border: none;
+    padding: 5px 10px;
+    font-weight:700;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+}
+button:hover {
+    background-color:#006dbf;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:active{
+    border-radius: 5px;
+    background-color:#006dbf;
+}
+button:disabled,button[disabled]{
+    background-color: #bfbfbf;
+    color: #fff;
+  /*opacity: 0.3;*/
+}
+
+.twt {
+  display: inline-block;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #66b5ff;
+    font-size: 24px;
+    width: 500px;
+    height:100px ;
+    margin:0px 0px;
+    padding:5px;
+    line-height:35px;
+    overflow:hidden;
+    margin:0px auto;
+}
+
+textarea:focus{
+	  outline:0px;
+}
+/* estilos de el post creado , hora y boton*/
+#time{
+    background: #fff;
+    font-family: 'Sree Krushnadevaraya', serif;
+    margin: 50px 20px;
+    padding:20px;
+    display:none;
+    border-radius: 5px;
+}
+#counter{
+    margin-left: 300px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-size:25px;
+    font-weight: 700;
+    color: #325d81;
+    display: inline-block;
+}
+.story {
+    background:white;
+    margin: 20px 120px;
+    padding-left:10px;
+    border-radius:5px;
+    font-size: 23px;
+}
