@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
       creatediv.appendChild(container);
       document.body.appendChild(creatediv);
       textarea.value = '';
-      //  validacion si pasa los 140 caracteres deshabilita boton.
+    */  //  validacion si pasa los 140 caracteres deshabilita boton.
       document.getElementById('counter').textContent = '140';
       document.getElementById('counter').style = '#325d81';
       submit.disabled = true;
@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
     } else {
       submit.disabled = true;
     }
-  });*/
+  });
 /*
   // funcion en la cual el textarea crece con el texto.
   textarea.addEventListener('keyup', function(event) {
