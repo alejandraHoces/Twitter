@@ -1,36 +1,126 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Sree+Krushnadevaraya" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Twitter</title>
-</head>
-<body>
-    <!--creando encabezado de mi pagina-->
-    <header>
-        <h1>Twitter</h1>
-    </header>
-        <!--creando contenido uno-->
-    <div class="textbox-one">
-        <h2>Reto de codigo</h2>
-        <p>Hola soy Alejandra Hoces,<br> front-end developer jr.</p>
-        <div>
-            <h4>CODIGO</h4>
-        </div>
-    </div>
-      <!--creando formulario-->
-    <form class="news">
-        <div id="textbox-two">
-        <textarea name="" id="publications" cols="30" rows="10"  placeholder="¿Que estas pensando?"></textarea>
-        </div>
-        <div class="twt">
-        <button type="button" id="submit">TWEET</button>
-        </div>
-        <div id="counter">140</div>
-    </form>
-      <!--Enlazando archivo js-->
-    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-   <script type="text/javascript" src="js/app.js"></script>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Twitter</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Open+Sans|Open+Sans+Condensed:400, 700" rel="stylesheet">
+		<link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+		<!-- Favicon generados con https://www.favicon-generator.org/ -->
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/faviconapple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="assets/images/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div id="container">
+			<div id="nav-bar">
+				<nav id="inner-nav">
+					<div id="icon-twitter">
+						<span class="icon-twitter"></span>
+					</div>
+					<div id="nav-left">
+						<ul>
+							<li><a href="index.html"><span class="icon-home"></span>Home</a></li>
+							<li><a href="#"><span class="icon-bell-o"></span>Notifications</a></li>
+							<li><a href="#"><span class="icon-envelope-o"></span>Messages</a></li>
+						</ul>
+					</div>
+					<div id="nav-right">
+						<div id="search">
+							<form action="/search" id="search-container">
+								<input type="text" id="search-input" autocomplete="off" spellcheck="false" placeholder="Search Twitter">
+								<span class="icon-search"></span>
+							</form>
+							<ul>
+								<li id="profile-pic"><a href="#"><img src="assets/images/alejandra.jpg" alt="Profile Picture: Cartoon Eating Popcorn"></a></li>
+								<li><button id="tweet-button" class="blueish-button">Tweet</button></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- Este div contendrá todo lo que está abajo de la barra de navegación -->
+			<div id="page-outer">
+				<!-- Y este, todo el contenido que vaya agregando desde ahora -->
+				<div id="page-content">
+					<!-- Imagen de Portada -->
+					<div id="profile-info">
+						<div id="cover-image"></div>
+						<div id="profile-picture-full"></div>
+						<div id="profile-details">
+							<ul id="profile-nav">
+								<li><a href="#">Tweets <span id="tweet-counter">0</span></a></li>
+								<li><a href="#">Likes <span id="likes">0</span></a></li>
+								<li><a href="#">Following <span id="following">0</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="profile">
+						<div id="about-me">
+							<h2 id="title-name"><a href="index.html">Alejandra Hoces</a></h2>
+							<span id="nick"><a href="index.html">@alejandrahoces</a></span>
+							<span id="bio">10 | travel, live, dream. | Radiohead | Team RockStar \ (•◡•) /</span>
+							<span id="web"><span class="icon-link"></span><a href="https://github.com/alejandraHoces">github.com/alejandraHoces</a></span>
+							<span id="joined"><span class="icon-calendar-o"></span>Joined August 2017</span>
+							<span id="birthday"><span class="icon-birthday-cake"></span>Born on February 10, 1993</span>
+						</div>
+					</div>
+					<!-- Acá irán los tweets -->
+					<div id="tweets">
+
+					</div>
+
+					<div id="who-to-follow">
+						<div id="follow-title">
+							<h3>Who to follow</h3>
+						</div>
+						<div class="follow-this" id="tony-stark">
+							<span class="name">Tony Stark</span>
+							<span class="nickname">@Iron_Man</span>
+							<button onclick="follow(this)" onmouseover="unfollow(this)" onmouseout="followingNow(this)">Follow</button>
+						</div>
+						<div class="follow-this" id="cap-america">
+							<span class="name">Captain America</span>
+							<span class="nickname">@CaptainAmerica</span>
+							<button onclick="follow(this)" onmouseover="unfollow(this)" onmouseout="followingNow(this)">Follow</button>
+						</div>
+						<div class="follow-this" id="laboratoria">
+							<span class="name">Laboratoria LatAm</span>
+							<span class="nickname">@LaboratoriaLA</span>
+							<button onclick="follow(this)" onmouseover="unfollow(this)" onmouseout="followingNow(this)">Follow</button>
+						</div>
+					</div>
+					<!-- Este es el modal que se abrirá al hacer clic en el botón Tweet -->
+					<div id="myModal" class="modal invisible">
+						<!-- Contenido del modal -->
+						<div id="modal-content">
+							<div id="modal-header">
+								<span id="compose">Compose new Tweet</span>
+								<span class="icon-close" id="close-button"></span>
+							</div>
+							<div id="modal-body">
+								<textarea name="tweet-here" id="tweet-here" placeholder="What's happening?" onfocus="countChars('tweet-here', 'counter', 140)" onkeydown="countChars('tweet-here', 'counter', 140)" onkeyup="countChars('tweet-here', 'counter', 140)"></textarea>
+							</div>
+							<div id="modal-footer">
+								<span id="counter"></span>
+								<button id="publish-tweet" class="blueish-button" onclick="tweetPublish()">Tweet</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/js/app.js"></script>
+	</body>
 </html>
