@@ -31,5 +31,7 @@ Se utilizó:
 - JAVASCRIPT  
 - Icomoon  
 
+[Ver proyecto aquí](https://alejandrahoces.github.io/twitter/)  
+
 ### Integrante  
 Alejandra Hoces Ñaupari.
