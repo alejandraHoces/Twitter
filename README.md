@@ -1,6 +1,6 @@
 # TWITTER  
 En el siguiente trabajo se realizó una replica de la red social Twitter.  
-![corel](1.5.jpg)  
+![corel](twitter.png)  
 
 ## Desarrollado para 
 [Laboratoria](http://laboratoria.la)
